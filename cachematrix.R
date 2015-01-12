@@ -22,7 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Calculates inverse of the matrix wrapped by makeCacheMatrix matrix 
 ## or returns cached value for the inverse.
-
+##
+## Any additional arguments are ignored (function signature is kept to match 
+## the assignment code).
 cacheSolve <- function(x, ...) {
   cacheValue <- x$getCachedInverse()
   if(!is.null(cacheValue)) {
